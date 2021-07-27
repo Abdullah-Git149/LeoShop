@@ -1,0 +1,74 @@
+/* .navbar{
+    background-color:transparent !important;
+    color: white !important;
+    position: fixed;
+} */
+nav{
+    background-color: white !important;
+    /* position: fixed !important;
+    top: 0;
+    left: 100px; */
+    z-index: 1;
+}
+.navbar-brand{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #321118 !important;
+}
+.banner{
+ 
+    height: 100vh;
+    width: 100%;
+    /* margin-top: 70px; */
+    background: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: "center";
+}
+.nav-item{
+    margin: 0 15px !important;
+}
+.navbar-nav {
+    margin-left: auto !important;
+}
+.shopping_icon{
+    font-size: 25px;
+    color: #321118;
+}
+.header{
+  
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.typed__data{
+    color: white;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 500;
+}
+@media(max-width : 765px){
+  
+    .banner{
+        
+        background: none;
+        width: 100%;
+        background-image: linear-gradient(to left top, #321118, #604550, #8f7f8b, #c3bec5, #ffffff);  
+      }
+      .header{
+        margin-top: 30px;
+      }
+      .typed__data{
+          font-size: 25px;
+          font-weight: 300;
+          text-align: center;
+          color: white;
+      }
+      
+}

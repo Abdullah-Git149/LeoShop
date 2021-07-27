@@ -1,0 +1,128 @@
+.cart__heading{
+    background-color: #f4f6f8 ;
+    padding: 10px;
+    margin: 10px 0;
+
+}
+.cart{
+    margin-bottom: 150px;
+}
+.cart__img{
+    width: 100%;
+    overflow: auto;
+}
+.cart__img img{
+    width: 100%;
+    object-fit: contain;
+}
+.cart_data{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: 5px 10px 24px -10px rgba(0,0,0,0.75);
+
+
+}
+.cart__qty{
+  
+    display: flex;
+    justify-content: center;
+}
+.dustbin{
+    font-size: 25px;
+    color: #321118;
+    cursor: pointer;
+}
+.cart__price ,.cart__tprice{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 5px 0;
+}
+.cart__name{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.summary{
+    margin: 10px 0;
+}
+
+.summary_heading{
+    background-color: #f4f6f8;
+    padding: 10px ;
+}
+.ex{
+    padding: 10px;
+    text-align: center;
+}
+.sa{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check_btn{
+    border: none;
+    padding: 10px;
+    width: 90%;
+    text-align: center;
+    background-color: #321118;
+    color: white;
+    font-weight: 400;
+    text-transform:uppercase ;
+
+}
+.summary_details{
+    box-shadow: 5px 10px 24px -10px rgba(0,0,0,0.75);
+
+    height: 165px;
+}
+.tPrice,.tItem{
+    font-weight: 600;
+}
+.incc,.decc,.qtyy{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid silver;
+    cursor: pointer;
+    color: #321118;
+    font-size: 15px;
+}
+@media(max-width : 765px){
+  
+    .coll-2{
+        width: 100%;
+    }
+    .cart__heading{
+        display: none;
+    }
+    .cart_data{
+        justify-content: center;
+        align-items: center;
+    }
+    .cart_data{
+        box-shadow: 5px 16px 44px -12px rgba(0,0,0,0.75);
+        padding: 10px;
+    }
+    .summary{
+        width: 100%;
+        /* background-color: teal; */
+    }
+    .dustbin{
+        margin: 10px 0;
+    }
+    .summary_details{
+        height: 200px;
+    }
+    .check_btn{
+        margin: 15px 0;
+    }
+
+}
