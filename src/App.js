@@ -10,19 +10,23 @@ import Footer from "./components/Footer";
 import Footer2 from "./components/Footer2";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Provider store={store}>
-          <Navbar />
-          <Route path="/" exact component={Home} />
-          <Route path="/cart" exact component={Cart}></Route>
-          <Route path="/details/:id" exact component={Details}></Route>
-          <Route path="/about" exact component={About}></Route>
-          <Route path="/contact" exact component={Contact}></Route>
+          <SimpleReactLightbox>
+            <Navbar />
+            <Route path="/" exact component={Home} />
+            <Route path="/cart" exact component={Cart}></Route>
+            <Route path="/details/:id" exact component={Details}></Route>
+            <Route path="/about" exact component={About}></Route>
+            <Route path="/contact" exact component={Contact}></Route>
+          </SimpleReactLightbox>
         </Provider>
+
         <Footer />
         <Footer2 />
       </Router>

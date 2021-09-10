@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { BiCaretLeft, BiCaretRight, BiTrashAlt } from "react-icons/bi";
+import { SRLWrapper } from "simple-react-lightbox"
 
 import './Cart.css'
 function Cart() {
@@ -24,9 +25,9 @@ function Cart() {
 
     }, [localProduct])
 
-    
-  
-    
+
+
+
 
 
 
@@ -54,9 +55,14 @@ function Cart() {
 
                                     <div className="cart_data" key={product.id}>
                                         <div className="coll-2">
-                                            <div className="cart__img">
-                                                <img src={product.image} alt="" />
-                                            </div>
+
+                                            <SRLWrapper>
+                                                <div className="cart__img">
+                                                    <img src={product.image} alt="" />
+                                                </div>
+                                            </SRLWrapper>
+
+
                                         </div>
                                         <div className="coll-2">
                                             <div className="cart__name">

@@ -95,6 +95,9 @@
     color: #321118;
     font-size: 15px;
 }
+.cart__img{
+    cursor: pointer;
+}
 @media(max-width : 765px){
   
     .coll-2{

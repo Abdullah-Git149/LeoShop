@@ -71,3 +71,28 @@
 .detail_para{
     text-align: justify;
 }
+.detail_other__images{
+
+    /* background-color: #321118; */
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px 0;
+
+}
+.other__img{
+    width: 100%;
+       
+
+}
+.other__img:hover{
+    /* transform: scale(1.1); */
+    transition: 0.4s ease;
+    box-shadow: 5px 16px 44px -12px rgba(0,0,0,0.75);
+
+}
+.other__img img{
+    width: 100%;
+}
+.other__img,.detail_img{
+    cursor: pointer;
+}

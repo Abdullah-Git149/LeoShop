@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
 import { BiCaretLeft, BiCaretRight } from "react-icons/bi";
-
+import { SRLWrapper } from "simple-react-lightbox"
 import './Detail.css'
 import { useState } from 'react';
 
@@ -28,7 +28,11 @@ function Details() {
                     <div className="row">
                         <div className="xx col-lg-6 col-md-6 col-sm-12">
                             <div className="detail_img">
-                                <img src={product.image} alt="" />
+
+                                <SRLWrapper>
+                                    <img src={product.image} alt="" />
+                                </SRLWrapper>
+
                             </div>
 
                         </div>
@@ -53,7 +57,14 @@ function Details() {
                                 <div className="detail_para">
                                     {product.desc}
                                 </div>
-
+                                <SRLWrapper>
+                                    <div className="detail_other__images  container">
+                                        <div className="row">
+                                            <div className="other__img col-sm-12 col-md-6 col-lg-6" ><img src={product.image1} alt="" /></div>
+                                            <div className="other__img col-sm-12 col-md-6 col-lg-6" > <a href={product.image1} data-lightbox="mygallery"><img src={product.image1} alt="" /></a></div>
+                                        </div>
+                                    </div>
+                                </SRLWrapper>
                             </div>
                         </div>
                     </div>
