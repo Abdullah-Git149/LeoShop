@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { BiCaretLeft, BiCaretRight, BiTrashAlt } from "react-icons/bi";
 
 import './Cart.css'
 function Cart() {
-    const { products, totalQuantities,totalPrice } = useSelector(state => state.CartReducer)
+    const { products, totalQuantities, totalPrice } = useSelector(state => state.CartReducer)
     const dispatch = useDispatch()
-    console.log(products.lenght)
+
+    const getLocalItems = () => {
+        const list = localStorage.getItem("itemLists")
+        setLocalProduct(localProduct)
+        if (list) {
+            return localStorage.getItem("itemLists")
+        } else {
+            return []
+        }
+    }
+    const [localProduct, setLocalProduct] = useState(products)
+
+    useEffect(() => {
+        localStorage.setItem("itemLists", JSON.stringify(localProduct))
+        setLocalProduct(localProduct)
+
+    }, [localProduct])
+
+    
+  
+    
+
+
+
     return (
         <div>
             <div className="cart">
@@ -90,13 +113,13 @@ function Cart() {
                                                 Total Price:
                                             </div>
                                             <div className="coll-6 ex" >
-                                                Rs. {Math.floor(totalPrice) }
+                                                Rs. {Math.floor(totalPrice)}
                                             </div>
-                                          
-                                      </div>
-                                      <div className="coll-6 sa">
-                                          <button className="check_btn">Check Out</button>
-                                      </div>
+
+                                        </div>
+                                        <div className="coll-6 sa">
+                                            <button className="check_btn">Check Out</button>
+                                        </div>
 
                                     </div>
 
