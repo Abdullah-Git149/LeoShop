@@ -2,28 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { BiCaretLeft, BiCaretRight, BiTrashAlt } from "react-icons/bi";
 import { SRLWrapper } from "simple-react-lightbox"
-
 import './Cart.css'
+
+const getLocalItems = () => {
+    const list = localStorage.getItem("itemLists") 
+    // setLocalProduct(localProduct)
+    if (list) {
+        return localStorage.getItem("itemLists")
+    } else {
+        return []
+    }
+}
 function Cart() {
     const { products, totalQuantities, totalPrice } = useSelector(state => state.CartReducer)
     const dispatch = useDispatch()
 
-    const getLocalItems = () => {
-        const list = localStorage.getItem("itemLists")
-        setLocalProduct(localProduct)
-        if (list) {
-            return localStorage.getItem("itemLists")
-        } else {
-            return []
-        }
-    }
-    const [localProduct, setLocalProduct] = useState(products)
+    const [localProduct, setLocalProduct] = useState(getLocalItems())
+
+
 
     useEffect(() => {
         localStorage.setItem("itemLists", JSON.stringify(localProduct))
-        setLocalProduct(localProduct)
-
-    }, [localProduct])
+ 
+    },[localProduct] )
 
 
 
@@ -35,7 +36,8 @@ function Cart() {
         <div>
             <div className="cart">
                 <div className="container">
-                    <h2>Your Cart</h2>
+                    <h2>Your Cart
+                    </h2>
                     {products.lenght > 0 ? 'nott' : <>
                         <div className="row">
                             <div className="col-lg-9 col-md-12 col-sm-12">

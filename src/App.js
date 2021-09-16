@@ -19,7 +19,7 @@ function App() {
         <Provider store={store}>
           <SimpleReactLightbox>
             <Navbar />
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Home}></Route>
             <Route path="/cart" exact component={Cart}></Route>
             <Route path="/details/:id" exact component={Details}></Route>
             <Route path="/about" exact component={About}></Route>
