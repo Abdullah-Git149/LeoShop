@@ -3,6 +3,8 @@ import Header from './Header';
 import './Home.css'
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import FeaturePhoto from "./FeaturePhoto"; 
+import WomenCloth from './WomenCloth';
 
 function Home() {
     const { products } = useSelector(state => state.ProductReducer)
@@ -10,7 +12,9 @@ function Home() {
     return (
         <div>
             <Header />
-            <div className="homeProducts">
+      
+
+            {/* <div className="homeProducts">
                 <div className="container">
                     <div className="row">
                         {products.map(product => (
@@ -45,7 +49,9 @@ function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
+                  <FeaturePhoto/>
+                  <WomenCloth/>
 
 
         </div>

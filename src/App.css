@@ -107,7 +107,16 @@ body{
     font-size: 14px;
     color: #686470;
   }
-  
+  .items_css{
+
+
+    overflow: hidden;
+  }
+  .items_css:hover{
+    transition: 0.5s ease;
+    box-shadow: 5px 16px 44px -12px rgba(0,0,0,0.75);
+
+  }
 @media(max-width : 765px){
     .containerr{
         width: 100%;
